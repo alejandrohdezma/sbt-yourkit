@@ -1,0 +1,10 @@
+> Docker / publishLocal
+$ absent target/docker/stage/opt/docker/yourkit/yourkit.so
+> yourKitOn
+> Docker / publishLocal
+$ exists target/docker/stage/opt/docker/yourkit/yourkit.so
+> checkBashScripts
+> yourKitOff
+> clean
+> Docker / publishLocal
+$ absent target/docker/stage/opt/docker/yourkit/yourkit.so

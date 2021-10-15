@@ -1,0 +1,6 @@
+> Docker / publishLocal
+$ absent target/docker/stage/opt/docker/yourkit/yourkit.so
+> yourKit
+> Docker / publishLocal
+$ exists target/docker/stage/opt/docker/yourkit/yourkit.so
+> checkBashScripts
