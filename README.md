@@ -9,7 +9,7 @@ This plugin copies the [YourKit](https://www.yourkit.com) Docker agent into the 
 Add the following line to your `plugins.sbt` file:
 
 ```sbt
-addSbtPlugin("com.alejandrohdezma" % "sbt-yourkit" % "0.0.0")
+addSbtPlugin("com.alejandrohdezma" % "sbt-yourkit" % "0.1.0")
 ```
 
 ## Usage
