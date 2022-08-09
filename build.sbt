@@ -16,4 +16,4 @@ lazy val `sbt-yourkit` = project
   .settings(publish / skip := false)
   .settings(scriptedLaunchOpts += s"-Dplugin.version=${version.value}")
   .settings(scriptedBufferLog := false)
-  .settings(addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.9.9"))
+  .settings(addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.9.10"))
