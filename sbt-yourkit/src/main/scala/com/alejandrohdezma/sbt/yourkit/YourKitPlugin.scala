@@ -47,7 +47,7 @@ import com.typesafe.sbt.packager.universal.UniversalPlugin.autoImport._
   * The [YourKit](https://www.yourkit.com) installed version can be customized with the `yourKitVersion` setting:
   *
   * ```scala
-  * yourKitVersion := "2021.3"
+  * yourKitVersion := "2023.5"
   * ```
   *
   * Also remember to re-build your Docker image using `sbt "Docker / publishLocal"`.
@@ -108,7 +108,7 @@ object YourKitPlugin extends AutoPlugin {
   override lazy val projectSettings = Seq(
     Universal / mappings   ++= onYourKit(Def.setting(agent.value -> "/yourkit/yourkit.so")).value,
     bashScriptExtraDefines ++= onYourKit(Def.setting(s"""addJava "${agentVMOption.value}"""")).value,
-    yourKitVersion          := "2022.9",
+    yourKitVersion          := "2023.5",
     yourKitOptions := Map(
       "port"        -> "10001",
       "listen"      -> "all",
@@ -142,7 +142,6 @@ object YourKitPlugin extends AutoPlugin {
 
     val yourKitUrl =
       url(s"https://www.yourkit.com/download/docker/YourKit-JavaProfiler-${yourKitVersion.value}-docker.zip")
-
     IO.unzipURL(yourKitUrl, temp)
 
     temp / s"YourKit-JavaProfiler-${yourKitVersion.value}" / "bin" / "linux-x86-64" / "libyjpagent.so"
