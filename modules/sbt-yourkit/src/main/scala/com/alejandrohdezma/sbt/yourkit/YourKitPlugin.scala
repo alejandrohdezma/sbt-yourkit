@@ -23,6 +23,7 @@ import sbt._
 import sbt.io.IO
 
 import com.typesafe.sbt.packager.archetypes.JavaAppPackaging
+import com.typesafe.sbt.packager.archetypes.scripts.BashStartScriptPlugin
 import com.typesafe.sbt.packager.archetypes.scripts.BashStartScriptPlugin.autoImport.bashScriptExtraDefines
 import com.typesafe.sbt.packager.docker.DockerPlugin.autoImport._
 import com.typesafe.sbt.packager.docker._
@@ -99,7 +100,7 @@ object YourKitPlugin extends AutoPlugin {
 
   import autoImport._
 
-  override def requires = JavaAppPackaging && DockerPlugin
+  override def requires = BashStartScriptPlugin && JavaAppPackaging && DockerPlugin
 
   override def trigger: PluginTrigger = allRequirements
 
