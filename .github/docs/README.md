@@ -25,7 +25,7 @@ However, if you want to enable this on a single SBT shell session, you can use t
 The [YourKit](https://www.yourkit.com) installed version can be customized with the `yourKitVersion` setting:
 
 ```scala
-yourKitVersion := "2023.5"
+yourKitVersion := "2024.3"
 ```
 
 Also remember to re-build your Docker image using `sbt "Docker / publishLocal"`.
