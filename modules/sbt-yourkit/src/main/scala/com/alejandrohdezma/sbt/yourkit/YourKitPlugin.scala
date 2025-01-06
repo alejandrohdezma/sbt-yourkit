@@ -109,7 +109,7 @@ object YourKitPlugin extends AutoPlugin {
   override lazy val projectSettings = Seq(
     Universal / mappings   ++= onYourKit(Def.setting(agent.value -> "/yourkit/yourkit.so")).value,
     bashScriptExtraDefines ++= onYourKit(Def.setting(s"""addJava "${agentVMOption.value}"""")).value,
-    yourKitVersion          := "2024.3",
+    yourKitVersion          := "2024.9",
     yourKitOptions := Map(
       "port"        -> "10001",
       "listen"      -> "all",
