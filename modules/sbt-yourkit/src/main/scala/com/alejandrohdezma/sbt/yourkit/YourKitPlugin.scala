@@ -48,7 +48,7 @@ import com.typesafe.sbt.packager.universal.UniversalPlugin.autoImport._
   * The [YourKit](https://www.yourkit.com) installed version can be customized with the `yourKitVersion` setting:
   *
   * ```scala
-  * yourKitVersion := "2024.3"
+  * yourKitVersion := "2025.3"
   * ```
   *
   * Also remember to re-build your Docker image using `sbt "Docker / publishLocal"`.
