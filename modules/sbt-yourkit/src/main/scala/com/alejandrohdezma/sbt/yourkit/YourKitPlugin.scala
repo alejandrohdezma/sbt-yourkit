@@ -16,8 +16,6 @@
 
 package com.alejandrohdezma.sbt.yourkit
 
-import scala.language.postfixOps
-
 import sbt.Keys._
 import sbt._
 import sbt.io.IO
