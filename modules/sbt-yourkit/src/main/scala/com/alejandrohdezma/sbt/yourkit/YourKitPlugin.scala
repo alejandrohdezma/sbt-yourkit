@@ -110,7 +110,7 @@ object YourKitPlugin extends AutoPlugin {
     Universal / mappings   ++= onYourKit(Def.setting(agent.value -> "/yourkit/yourkit.so")).value,
     bashScriptExtraDefines ++= onYourKit(Def.setting(s"""addJava "${agentVMOption.value}"""")).value,
     yourKitVersion          := "2024.9",
-    yourKitOptions := Map(
+    yourKitOptions          := Map(
       "port"        -> "10001",
       "listen"      -> "all",
       "sessionname" -> normalizedName.value
@@ -134,7 +134,7 @@ object YourKitPlugin extends AutoPlugin {
     "yourKit"    -> ";set ThisBuild / yourKitEnabled := true",
     "yourKitOn"  -> ";set ThisBuild / yourKitEnabled := true",
     "yourKitOff" -> ";set ThisBuild / yourKitEnabled := false"
-  ).flatMap(addCommandAlias _ tupled)
+  ).flatMap((addCommandAlias _).tupled)
 
   private def agent = Def.setting {
     sLog.value.info(s"Downloading YourKit ${yourKitVersion.value}...")
